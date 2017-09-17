@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>So much chocolate, so little time</title>
+  <meta name="description" content="">
+  <meta name="author" content="Nathan L">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h3>Exploratory Cocoa Analysis</h3>
+  <p>Nathan L</p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h3>The data</h3>
+  <p>Flavors of Cacao<br>
+available at <a href="http://flavorsofcacao.com/index.html">http://flavorsofcacao.com/index.html</a>  </p>
+
+<p>Expert ratings of over 1,700 individual chocolate bars, along with information on</p>
+
+<ul>
+<li>regional origin</li>
+<li>percentage of cocoa</li>
+<li>variety of chocolate bean used</li>
+<li>where the beans were grown</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h4>Where are most of the rated bars produced?</h4>
+  <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h4>Where are the highest and lowest rated bars produced?</h4>
+  <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"></p>
+
+<p>Vietnam: <a href="https://www.nytimes.com/2016/03/06/t-magazine/food/marou-vietnamese-chocolate.html">The Best Chocolate You&#39;ve Never Tasted</a></p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h4>...and where do they source their beans?</h4>
+  <p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"></p>
+
+<p><small>Perhaps there are more low quality beans from Ecuador, Peru, and Venezuela</small><br>
+<small>You want Brazilian and Vietnamese beans.</small></p>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h4>Where do Australia (top 5) &amp; U.K. (bottom 5) source their beans?</h4>
+  <p><small>they don&#39;t grow their own</small><br>
+<img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"></p>
+
+<p><small>We see Ecuadorean and Venezuelan beans in low rated U.K. bars</small></p>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h4>Is percentage of cocoa correlated with rating?</h4>
+  <p><img src="assets/fig/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6"></p>
+
+<p>Doesn&#39;t look like anything to me.</p>
+
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h4>Distribution of ratings by bean types, Top 10</h4>
+  <p><img src="assets/fig/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"></p>
+
+<p><a href="https://www.somachocolate.com/blogs/news/18222553-porcelana-finally-after-a-decade-of-waiting">Criollo Porcelana: The holy grail of cocoa beans</a></p>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h4>Next time you go to whole foods...</h4>
+  <p>Yay &#9786;<br>
+<img src="assets/img/amedei.jpg" alt="">
+<img src="assets/img/domori.jpg" alt="">
+<img src="assets/img/marcolini.jpg" alt="">
+<br>
+Nay &#9785;<br>
+<img src="assets/img/middlebury.jpg" alt="">
+<img src="assets/img/frenchbroad.jpg" alt=""></p>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h3>Happy eating!</h3>
+  <p><img src="assets/img/fc.jpg" alt=""></p>
+
+</section>
+<section class='' data-state='' id='slide-11'>
+  
+  <p><a href="cacao.R">the code</a></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
